@@ -1,0 +1,88 @@
+<!-- AI Chatbot Component - Add to your portfolio -->
+
+<!-- Chatbot Toggle Button -->
+<button class="chatbot-toggle" id="chatbotToggle" aria-label="Open AI Chat">
+    <span class="chat-icon"><i class="fas fa-robot"></i></span>
+    <span class="close-icon"><i class="fas fa-times"></i></span>
+</button>
+
+<!-- Chatbot Window -->
+<div class="chatbot-container" id="chatbotContainer">
+    <!-- Header -->
+    <div class="chatbot-header">
+        <div class="chatbot-header-info">
+            <div class="chatbot-avatar">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="chatbot-title">
+                <h3>Cloud Assistant</h3>
+                <span class="status"><span class="status-dot"></span> AI Powered</span>
+            </div>
+        </div>
+        <button class="chatbot-minimize" id="chatbotMinimize">
+            <i class="fas fa-minus"></i>
+        </button>
+    </div>
+
+    <!-- Messages Area -->
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+            <div class="message-avatar">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="message-content">
+                <p>👋 Hi there! I'm Hariprashanth's AI assistant. I can help you learn about his skills, projects, certifications, and more. Feel free to ask me anything!</p>
+            </div>
+        </div>
+        
+        <!-- Suggested Questions -->
+        <div class="suggested-questions">
+            <p class="suggestion-label">Try asking:</p>
+            <div class="suggestion-buttons">
+                <button class="suggestion-btn" data-question="Tell me about yourself">About Me</button>
+                <button class="suggestion-btn" data-question="What are your technical skills?">Skills</button>
+                <button class="suggestion-btn" data-question="Tell me about your AWS project">Projects</button>
+                <button class="suggestion-btn" data-question="What certifications are you planning?">Certifications</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+        <div class="message bot-message">
+            <div class="message-avatar">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="message-content typing">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="chatbot-input-area">
+        <input 
+            type="text" 
+            class="chatbot-input" 
+            id="chatbotInput" 
+            placeholder="Ask me about Hariprashanth..."
+            autocomplete="off"
+        >
+        <button class="chatbot-send" id="chatbotSend">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+    </div>
+</div>
+
+<!-- API Configuration -->
+<!-- Note: Update the API_URL to your deployed backend or local server -->
+<script>
+    // Configuration - Update this to your backend URL
+    window.chatbotConfig = {
+        apiUrl: 'http://localhost:3000/api/chat',
+        // For production, use your deployed URL:
+        // apiUrl: 'https://your-vercel-app.vercel.app/api/chat'
+    };
+</script>
