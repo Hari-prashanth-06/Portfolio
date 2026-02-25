@@ -290,6 +290,7 @@ section {
 }
 
 /* Section divider - soft wave */
+/* Section divider - soft wave */
 section::before {
     content: '';
     position: absolute;
@@ -1242,3 +1243,4 @@ section::before {
         font-size: 1.75rem;
     }
 }
+
